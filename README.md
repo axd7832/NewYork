@@ -2,8 +2,9 @@
 
 ## What you need to get started
 * Node + NPM
-* [link](https://getcomposer.org/ "Composer")
-* [link](https://laravel.com/docs/4.2/quick "Laravel")
+* PHP 7.3 ([Windows instructions to run PHP on command line](http://php.net/manual/en/install.windows.legacy.index.php#install.windows.legacy.commandline))
+* [Composer](https://getcomposer.org/ "Composer")
+* [Laravel](https://laravel.com/docs/4.2/quick "Laravel")
 
 The Laravel link has the instructions that you need to download it.
 
