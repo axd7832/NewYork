@@ -13,22 +13,22 @@ class CompanyTableSeeder extends Seeder
     public function run()
     {
         //
-        $company = Company::create([
+        Company::create([
             'name' => 'Tesla',
             'description' => 'A US Based Car Company'
         ]);
 
-        $company = Company::create([
+        Company::create([
             'name' => 'Google',
             'description' => 'A verb'
         ]);
 
-        $company = Company::create([
+        Company::create([
             'name' => 'Facebook',
             'description' => 'See no evil. Speak no evil'
         ]);
 
-        $company = Company::create([
+        Company::create([
             'name' => 'Twitter',
             'description' => 'News Platform?'
         ]);
