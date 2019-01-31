@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +18,7 @@ Route::get('login', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
 ]);
-Route::get('logout', 'Auth\LoginController@logout');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 Route::get('api/company/getAll', 'CompanyController@getAll');

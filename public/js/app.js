@@ -6161,7 +6161,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.navbar[data-v-6dde423b] {\n  width:100%;\n  background-color:  #F0EFEF;\n}\n.navbar-nav[data-v-6dde423b]{\n  background-color: #F0EFEF;\n  border:1px solid #F0EFEF; \n  border-radius: 4px;\n  text-align:center;\n  color: #C3C7BD;\n  text-align: center;\n}\n.navbar a.nav-link[data-v-6dde423b]:hover{\n  background-color:#C3C7BD;\n  border:1px solid #C3C7BD;\n  border-radius : 2px;\n  text-align: center;\n}\n\n", ""]);
+exports.push([module.i, "\n.navbar[data-v-6dde423b] {\r\n  width:100%;\r\n  background-color:  #F0EFEF;\n}\n.navbar-nav[data-v-6dde423b]{\r\n  background-color: #F0EFEF;\r\n  border:1px solid #F0EFEF; \r\n  border-radius: 4px;\r\n  text-align:center;\r\n  color: #C3C7BD;\r\n  text-align: center;\n}\n.navbar a.nav-link[data-v-6dde423b]:hover{\r\n  background-color:#C3C7BD;\r\n  border:1px solid #C3C7BD;\r\n  border-radius : 2px;\r\n  text-align: center;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -37586,9 +37586,11 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("li", { staticClass: "nav-item" }, [
-                  _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                    _vm._v("Logout")
-                  ])
+                  _c(
+                    "a",
+                    { staticClass: "nav-link", attrs: { href: "/logout" } },
+                    [_vm._v("Logout")]
+                  )
                 ])
               ])
             ]
@@ -51989,8 +51991,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/andrewdiana/Documents/School/Spring19/SeniorDev/NewYork/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/andrewdiana/Documents/School/Spring19/SeniorDev/NewYork/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\kola1\PhpstormProjects\NewYork\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\kola1\PhpstormProjects\NewYork\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
