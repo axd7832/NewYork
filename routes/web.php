@@ -19,6 +19,8 @@ Route::get('login', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
 ]);
+Route::get('logout', 'Auth\LoginController@logout');
+
 
 Route::get('api/company/getAll', 'CompanyController@getAll');
 Route::get('api/company/{id}', 'CompanyController@getOne');
@@ -35,10 +37,10 @@ Route::delete('api/user/{id}', 'UserController@delete');
 // Route::post('api/workflow/{id}', 'WorkflowController@getOne');
 // Route::delete('api/workflow/{id}', 'WorkflowController@delete');
 
-// Route::get('api/milestone/getAll','MilestoneController@getOne');
-// Route::get('api/milestone/{id}','MilestoneController@getAll');
-// Route::post('api/milestone','MilestoneController@store');
-// Route::delete('api/milestone','MilestoneController@delete');
+Route::get('api/milestone/getAll','MilestoneController@getOne');
+Route::get('api/milestone/{id}','MilestoneController@getAll');
+Route::post('api/milestone','MilestoneController@store');
+Route::delete('api/milestone','MilestoneController@delete');
 
 // Route::get('api/document','DocumentController@getOne');
 // Route::get('api/document/{id}','DocumentController@getAll');
