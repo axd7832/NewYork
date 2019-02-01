@@ -30,11 +30,11 @@
               <li class="nav-item">
               <a class="nav-link" href="#">myProfile</a>
             </li>
-              <li class="nav-item">
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
               <a class="nav-link" href="/logout">Logout</a>
-              </li>
-
-
+            </li>
           </ul>
         </div>
       </nav>

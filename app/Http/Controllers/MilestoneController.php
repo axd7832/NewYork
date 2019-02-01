@@ -13,51 +13,61 @@ class MilestoneController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // public function store(Request $request)
-    // {
-    //     // $validate_company = $request->validate([
+    public function store(Request $request)
+    {
+        $validated_company = $request->validate([
+            'name' => 'required|string|unique:milestones,name',
+            'description' => 'string|max:255'
+        ]);
+        $company = Milestone::create([
+            'name' => $validated_company['name'], 
+            'description' => $validated_company['description']
+            ]);
+        return resonse($company);
+    }
 
-    //     // ]);
-    //     $company = Company::create([
-    //         'name' => $request['name'], 
-    //         'description' => $request['description']
-    //         ]);
-    //     return resonse($company);
-    // }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function delete(Request $request, int $id)
+    {
+        // Adds the id to the request so it can be validated
+        // $request->merge($id);
+        // $data = $request ->validate([
+        //     'id' => 'required|exists:milestones'
+        // ]);
+        Milestone::destroy($id);
+        response("Milestone $id Deleted");
+    }
 
-    // /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function delete(Request $request, int $id)
-    // {
-    //     Company::destroy($id);
-    //     response("Company $id Deleted");
-    // }
+    /**
+     * Gets all companies 
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getAll(Request $request) 
+    {
+        $milestones = Milestone::all();
+        return response($milestones);
+    }
 
-    // /**
-    //  * Gets all companies 
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function getAll(Request $request) 
-    // {
-    //     $companies = Company::all();
-    //     return response($companies);
-    // }
-
-    // /**
-    //  * Gets one company by id
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function getOne(Request $request, int $id) 
-    // {
-    //     $company= Company::find($id);
-    //     return response($company);
-    // }
+    /**
+     * Gets one company by id
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getOne(Request $request, int $id) 
+    {
+        // $request = $request->merge($id);
+        // $validate_milestone_id = $request -> validate([
+        //     'id' => 'required|exists:milestones'
+        // ]);
+        $milestone = Milestone::find($id);
+        return response($milestone);
+    }
 }

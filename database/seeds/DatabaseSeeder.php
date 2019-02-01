@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserTableSeeder::class,
             CompanyTableSeeder::class,
-            // MilestoneTableSeeder::class
+            MilestoneTableSeeder::class,
+            WorkflowTableSeeder::class,
         ]);
     }
 }

@@ -12,6 +12,6 @@ class Workflow extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'type', 'steps'
+        'name', 'description', 'funding_type',
     ];
 }

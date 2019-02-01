@@ -13,14 +13,6 @@
 // Browser Routes
 Route::get('', 'VueController@index')->name('vue');
 
-
-Route::get('login', [
-    'as' => 'login',
-    'uses' => 'Auth\LoginController@showLoginForm'
-]);
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
-
 Route::get('api/company/getAll', 'CompanyController@getAll');
 Route::get('api/company/{id}', 'CompanyController@getOne');
 Route::post('api/company', 'CompanyController@store');
@@ -36,8 +28,8 @@ Route::delete('api/user/{id}', 'UserController@delete');
 // Route::post('api/workflow/{id}', 'WorkflowController@getOne');
 // Route::delete('api/workflow/{id}', 'WorkflowController@delete');
 
-Route::get('api/milestone/getAll','MilestoneController@getOne');
-Route::get('api/milestone/{id}','MilestoneController@getAll');
+Route::get('api/milestone/getAll','MilestoneController@getAll');
+Route::get('api/milestone/{id}','MilestoneController@getOne');
 Route::post('api/milestone','MilestoneController@store');
 Route::delete('api/milestone','MilestoneController@delete');
 
@@ -46,15 +38,24 @@ Route::delete('api/milestone','MilestoneController@delete');
 // Route::post('api/milestone','DocumentController@store');
 // Route::delete('api/milestone','DocumentController@delete');
 
-
-
-
-
 // Basic Get Route
 // Route::get('api/path-to-resource','Controller-That-Returns-A-Resource');
 
+
+
+
+// Login / Logout Routes
+Route::get('login', [
+    'as' => 'login',
+    'uses' => 'Auth\LoginController@showLoginForm'
+]);
+Route::get('logout', 'Auth\LoginController@logout');
+
+// Password Reset Routes
+Route::post('password/email', ['as' => 'password.email', 'uses' => 'Auth\ForgotPasswordController@sendResetLinkEmail']);
+Route::get('password/reset', ['as' => 'password.request', 'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm']);
+Route::post('password/reset', ['as' => '', 'uses' => 'Auth\ResetPasswordController@reset']);
+Route::get('password/reset/{token}', ['as' => 'password.reset', 'uses' => 'Auth\ResetPasswordController@showResetForm']);
 // Wildcard Routes for Vue Router
 Route::get('/{any}', 'VueController@index')->where('any', '.*');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

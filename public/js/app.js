@@ -1808,6 +1808,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HomeDashboard.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/HomeDashboard.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {
+    window.axios.get('/api/company/getAll').then(function (res) {
+      console.log(res.data);
+    }).catch(function (err) {
+      console.log(err);
+    });
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=script&lang=js& ***!
@@ -6161,7 +6191,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.navbar[data-v-6dde423b] {\r\n  width:100%;\r\n  background-color:  #F0EFEF;\n}\n.navbar-nav[data-v-6dde423b]{\r\n  background-color: #F0EFEF;\r\n  border:1px solid #F0EFEF; \r\n  border-radius: 4px;\r\n  text-align:center;\r\n  color: #C3C7BD;\r\n  text-align: center;\n}\n.navbar a.nav-link[data-v-6dde423b]:hover{\r\n  background-color:#C3C7BD;\r\n  border:1px solid #C3C7BD;\r\n  border-radius : 2px;\r\n  text-align: center;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.navbar[data-v-6dde423b] {\n  width:100%;\n  background-color:  #F0EFEF;\n}\n.navbar-nav[data-v-6dde423b]{\n  background-color: #F0EFEF;\n  border:1px solid #F0EFEF; \n  border-radius: 4px;\n  text-align:center;\n  color: #C3C7BD;\n  text-align: center;\n}\n.navbar a.nav-link[data-v-6dde423b]:hover{\n  background-color:#C3C7BD;\n  border:1px solid #C3C7BD;\n  border-radius : 2px;\n  text-align: center;\n}\n\n", ""]);
 
 // exports
 
@@ -37583,8 +37613,10 @@ var staticRenderFns = [
                   _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
                     _vm._v("myProfile")
                   ])
-                ]),
-                _vm._v(" "),
+                ])
+              ]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "navbar-nav" }, [
                 _c("li", { staticClass: "nav-item" }, [
                   _c(
                     "a",
@@ -51795,15 +51827,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HomeDashboard_vue_vue_type_template_id_2e6a0ccc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomeDashboard.vue?vue&type=template&id=2e6a0ccc& */ "./resources/js/components/HomeDashboard.vue?vue&type=template&id=2e6a0ccc&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _HomeDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomeDashboard.vue?vue&type=script&lang=js& */ "./resources/js/components/HomeDashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _HomeDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _HomeDashboard_vue_vue_type_template_id_2e6a0ccc___WEBPACK_IMPORTED_MODULE_0__["render"],
   _HomeDashboard_vue_vue_type_template_id_2e6a0ccc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -51817,6 +51851,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/HomeDashboard.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/HomeDashboard.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/HomeDashboard.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./HomeDashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/HomeDashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeDashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

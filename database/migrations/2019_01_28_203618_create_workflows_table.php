@@ -15,6 +15,9 @@ class CreateWorkflowsTable extends Migration
     {
         Schema::create('workflows', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('description');
+            $table->enum('funding_type',['NYSERDA', 'HOTSPOT']);
             $table->timestamps();
         });
     }
