@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Company;
+use Response;
 
 class CompanyController extends Controller
 {
@@ -19,7 +20,7 @@ class CompanyController extends Controller
             'name' => $request['name'], 
             'description' => $request['description']
             ]);
-        return resonse($company);
+        return response($company);
     }
 
     /**
@@ -31,7 +32,7 @@ class CompanyController extends Controller
     public function delete(Request $request, int $id)
     {
         Company::destroy($id);
-        response("Company $id Deleted");
+        return response("Company $id Deleted");
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Workflow extends Model
+class WorkflowStep extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,11 +12,7 @@ class Workflow extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'funding_type',
+        'name', 'signoffs_required','step_number'
     ];
 
-    public function workflow_steps()
-    {
-        return $this->hasMany('App\WorkflowStep');
-    }
 }

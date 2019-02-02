@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             CompanyTableSeeder::class,
             MilestoneTableSeeder::class,
             WorkflowTableSeeder::class,
+            WorkflowStepTableSeeder::class,
         ]);
     }
 }

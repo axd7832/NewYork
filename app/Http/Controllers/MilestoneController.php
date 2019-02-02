@@ -23,7 +23,7 @@ class MilestoneController extends Controller
             'name' => $validated_company['name'], 
             'description' => $validated_company['description']
             ]);
-        return resonse($company);
+        return response($company);
     }
 
     /**
@@ -40,7 +40,7 @@ class MilestoneController extends Controller
         //     'id' => 'required|exists:milestones'
         // ]);
         Milestone::destroy($id);
-        response("Milestone $id Deleted");
+        return response("Milestone $id Deleted");
     }
 
     /**

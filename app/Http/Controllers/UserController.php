@@ -24,7 +24,7 @@ class UserController extends Controller
             'email' => $request['email'],
             'password' => $request['password']
             ]);
-        return resonse($user);
+        return response($user);
     }
 
     /**
@@ -36,7 +36,7 @@ class UserController extends Controller
     public function delete(Request $request, int $id)
     {
         User::destroy($id);
-        response("User $id Deleted");
+        return response("User $id Deleted");
     }
 
     /**
