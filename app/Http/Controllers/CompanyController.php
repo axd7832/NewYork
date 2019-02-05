@@ -18,7 +18,10 @@ class CompanyController extends Controller
     {
         $company = Company::create([
             'name' => $request['name'], 
-            'description' => $request['description']
+            'description' => $request['description'],
+            'ceo_id' => $request['ceo_id'],
+            'coach_id' => $request['coach_id'],
+            'director_id' => $request['director_id'],
             ]);
         return response($company);
     }
@@ -57,5 +60,35 @@ class CompanyController extends Controller
     {
         $company= Company::find($id);
         return response($company);
+    }
+
+    /**
+     * Updates a company
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request) 
+    {
+        $company= Company::find($request['id']);
+
+        if ($request['ceo_id']) {
+            $company->ceo_id = $request['ceo_id'];
+        }
+        if ($request['director_id']) {
+            $company->director_id = $request['director_id'];
+        }
+        if ($request['coach_id']) {
+            $company->coach_id = $request['coach_id'];
+        }
+        if ($request['name']) {
+            $company->name = $request['name'];
+        }
+        if ($request['description']) {
+            $company->description = $request['description'];
+        }
+        $company->save();
+
+        return response("Company ".$company['id']." updated");
     }
 }

@@ -24,8 +24,9 @@ Route::post('user','UserController@store');
 Route::delete('user','UserController@delete');
 
 Route::get('company/getAll', 'CompanyController@getAll');
-Route::get('company/{id}', 'CompanyController@getOne');
+Route::get('company/getOne/{id}', 'CompanyController@getOne');
 Route::post('company/create', 'CompanyController@store');
+Route::post('company/update', 'CompanyController@update');
 Route::delete('company/{id}', 'CompanyController@delete');
 
 Route::get('api/user/getAll', 'UserController@getAll');

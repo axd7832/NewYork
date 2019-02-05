@@ -22,6 +22,11 @@ Route::get('login', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
 ]);
+Route::post('login', ['as' => '', 'uses' => 'Auth\LoginController@login']);
+
+Route::get('register', ['as' => 'register', 'uses' => 'Auth\RegisterController@showRegistrationForm']);
+Route::post('register', ['as' => '', 'uses' => 'Auth\RegisterController@register']);
+
 Route::get('logout', 'Auth\LoginController@logout');
 
 // Password Reset Routes

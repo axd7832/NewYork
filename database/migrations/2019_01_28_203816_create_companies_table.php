@@ -18,8 +18,19 @@ class CreateCompaniesTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->timestamps();
-            // $table->integer('ceo_id')->unsigned()->nullabe();
-            // $table->foreign('ceo_id')->references('id')->on('users')->onDelete('cascade');
+
+            // Company CEO 
+            $table->integer('ceo_id')->unsigned()->nullable();
+            $table->foreign('ceo_id')->references('id')->on('users')->onDelete('cascade');
+
+            // VC Director
+            $table->integer('director_id')->unsigned()->nullable();
+            $table->foreign('director_id')->references('id')->on('users')->onDelete('cascade');
+
+            // VC Coach
+            $table->integer('coach_id')->unsigned()->nullable();
+            $table->foreign('coach_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

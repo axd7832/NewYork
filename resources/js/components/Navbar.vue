@@ -2,7 +2,7 @@
   <div>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light ">
-        <a class="navbar-brand" href="#">Venture Creations</a>
+        <a class="navbar-brand" href="/">Venture Creations</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,26 +10,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Workflow</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="#">Milestones</a>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/">Workflow</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="/">Milestones</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">Documents</a>
+              <a class="nav-link" href="/">Projects</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">myCompany</a>
+              <a class="nav-link" href="/">Documents</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">myProfile</a>
+              <a class="nav-link" href="/">myCompany</a>
             </li>
+              <li class="nav-item">
+              <a class="nav-link" href="/">myProfile</a>
+            </li> -->
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">

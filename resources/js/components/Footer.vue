@@ -25,10 +25,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   footer {
-    position: absolute;
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    min-height: 60px;
     line-height: 60px;
     background-color: #f5f5f5;
   }

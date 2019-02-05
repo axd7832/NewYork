@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import HomeDashboard from './components/HomeDashboard'
+import HomeDashboard from './pages/HomeDashboard'
+import Company from './pages/Company'
 // import AdminCompanies from './pages/admin/AdminCompanies'
 // import AdminUsers from './pages/admin/AdminUsers'
 // import AdminRoles from './pages/admin/AdminRoles'
@@ -15,7 +16,23 @@ const router = new VueRouter({
       path: '/',
       name: 'dashboard',
       component: HomeDashboard
-    }
+    },
+    {
+      path: '/company',
+      name: 'company',
+      component: Company
+    },
+    {
+      path: '/company/:id',
+      name: 'company',
+      component: Company
+    },
+    {
+      path: '**',
+      redirect: '/'
+      // name: 'dashboard',
+      // component: HomeDashboard
+    },
     //,
     // {
     //   path: '/admin',

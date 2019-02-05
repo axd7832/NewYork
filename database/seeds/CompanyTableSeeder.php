@@ -15,7 +15,7 @@ class CompanyTableSeeder extends Seeder
         //
         Company::create([
             'name' => 'Tesla',
-            'description' => 'A US Based Car Company'
+            'description' => 'A US Based Car Company',
         ]);
 
         Company::create([

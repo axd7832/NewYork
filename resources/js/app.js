@@ -3,6 +3,10 @@ import Routes from './routes'
 require('./bootstrap');
 
 window.Vue = require('vue');
+import Notifications from 'vue-notification'
+
+window.Vue.use(Notifications);
+
 
 /**
  * The following block of code may be used to automatically register your
