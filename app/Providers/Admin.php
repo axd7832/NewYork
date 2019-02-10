@@ -7,12 +7,12 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     use Notifiable;
     use HasRoles;
 
-    protected $guard_name = 'web';
+    protected $guard_name = 'admin';
 
     /**
      * The attributes that are mass assignable.
